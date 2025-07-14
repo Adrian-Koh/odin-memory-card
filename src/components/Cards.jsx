@@ -11,7 +11,7 @@ export default function Cards() {
       setInfos(result);
     };
     update();
-  }, [infos]);
+  }, []);
 
   return (
     <div className="grid">
