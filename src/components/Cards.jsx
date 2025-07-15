@@ -7,6 +7,7 @@ export default function Cards() {
   const [clickedIds, setClickedIds] = useState(
     new Array(IMAGE_COUNT).fill(false),
   );
+  const [bestScore, setBestScore] = useState(0);
 
   useEffect(() => {
     let fetchImages = async () => {
@@ -24,6 +25,8 @@ export default function Cards() {
     } else {
       newClickedIds = [...clickedIds];
       newClickedIds[id] = true;
+      const score = newClickedIds.filter((clicked) => clicked).length;
+      if (score > bestScore) setBestScore(score);
     }
     setClickedIds(newClickedIds);
     setInfos(randomizeSequence(infos));
@@ -32,7 +35,8 @@ export default function Cards() {
   return (
     <div className="container">
       <div className="score">
-        Score: {clickedIds.filter((clicked) => clicked).length}
+        <p>Score: {clickedIds.filter((clicked) => clicked).length}</p>
+        <p>Best score: {bestScore}</p>
       </div>
       <div className="grid">
         {infos.map((info) => (
