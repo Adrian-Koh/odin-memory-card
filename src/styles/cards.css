@@ -6,6 +6,7 @@ html {
     background-image: url("../../public/star-platinum.png");
     background-size: cover;
     background-repeat: no-repeat;
+    font-family: "Amarante", serif;
 }
 
 img {
@@ -17,15 +18,16 @@ img {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 10px;
+    gap: 5px;
 }
 
 .card {
     padding: 10px;
-    margin: 10px;
+    margin: 5px;
     border-radius: 5px;
     background: linear-gradient(45deg, #C33764, #1D2671);
     color: var(--pink);
+    text-align: center;
 }
 
 .card:hover {
