@@ -1,3 +1,13 @@
+:root {
+    --pink: #FFBBBB;
+}
+
+html {
+    background-image: url("../../public/star-platinum.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 img {
     height: 200px;
     width: auto;
@@ -9,3 +19,41 @@ img {
     grid-template-rows: repeat(2, 1fr);
     gap: 10px;
 }
+
+.card {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    background: linear-gradient(45deg, #C33764, #1D2671);
+    color: var(--pink);
+}
+
+.card:hover {
+    box-shadow: 3px 3px 5px 5px var(--pink);
+}
+
+p {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    gap: 10px;
+}
+
+.score {
+    color: var(--pink);
+}
+
+.score p {
+    text-wrap: nowrap;
+}
+
+@media (max-width: 1200px) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+}
+
+

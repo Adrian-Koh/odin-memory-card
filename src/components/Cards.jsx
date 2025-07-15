@@ -34,10 +34,6 @@ export default function Cards() {
 
   return (
     <div className="container">
-      <div className="score">
-        <p>Score: {clickedIds.filter((clicked) => clicked).length}</p>
-        <p>Best score: {bestScore}</p>
-      </div>
       <div className="grid">
         {infos.map((info) => (
           <div className="card" key={info.id}>
@@ -45,6 +41,10 @@ export default function Cards() {
             <p>{info.name}</p>
           </div>
         ))}
+      </div>
+      <div className="score">
+        <p>Score: {clickedIds.filter((clicked) => clicked).length}</p>
+        <p>Best score: {bestScore}</p>
       </div>
     </div>
   );
